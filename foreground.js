@@ -29,7 +29,7 @@ function getLikes() {
 function addRatioSpan(ratio) {
     let ops = document.getElementsByClassName("ops")[0];
     if (ops.getElementsByClassName("ratio").length !== 0) {
-        return;
+        ops.removeChild(ops.getElementsByClassName("ratio")[0]);
     }
 
     let ratioSpan = document.createElement("span");
