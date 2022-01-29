@@ -1,8 +1,8 @@
 {
     "name": "Up Index Q",
-    "description": "Chrome extension to show Bilibili likes / view count precentage",
-    "version": "0.1.0",
-    "manifest_version": 2,
+    "description": "Chrome extension to show Bilibili likes - view count precentage",
+    "version": "0.2.0",
+    "manifest_version": 3,
     "icons": {
         "16": "./icon.png",
         "32": "./icon.png",
@@ -10,11 +10,12 @@
         "128": "./icon.png"
     },
     "background": {
-        "scripts": ["./background.js"]
+        "service_worker": "./background.js"
     },
     "options_page": "./options.html",
-    "browser_action": {
+    "action": {
         "default_popup": "popup.html"
     },
-    "permissions": ["tabs", "https://www.bilibili.com/"]
+    "permissions": ["tabs", "scripting"],
+    "host_permissions": ["https://www.bilibili.com/"]
 }
