@@ -11,8 +11,12 @@ injectSightseer = (tab) => {
             tab.url
         )
     ) {
-        chrome.tabs.executeScript(null, { file: "./foreground.js" }, () =>
-            console.log("i injected")
+        chrome.scripting.executeScript(
+            {
+                target: { tabId: tab.id },
+                files: ["content-script.js"],
+            },
+            () => console.log("i injected")
         );
     }
 };
