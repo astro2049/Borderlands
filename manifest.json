@@ -1,6 +1,6 @@
 {
     "name": "Up Index Q",
-    "description": "Chrome extension to show Bilibili likes - view count precentage",
+    "description": "For Bilibili videos - Up index is the percentage (%) of likes in view count",
     "version": "0.2.0",
     "manifest_version": 3,
     "icons": {
